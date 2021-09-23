@@ -3,12 +3,10 @@
 let playerScore = 0;
 let computerScore = 0;
 
-// To remove errors
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
 
-// Computer Choice
 function computerPlay() {
   const randomPlay = Math.floor(Math.random() * 3) + 1;
   if (randomPlay === 1) {
@@ -20,7 +18,6 @@ function computerPlay() {
   }
 }
 
-// One Single Round
 function playRound(playerSelection, computerSelection) {
   if (computerSelection === playerSelection) {
     console.log("It's a Draw");
@@ -37,7 +34,6 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-// To see if the player value is correct and play Round
 function determinePlays(message) {
   let playerSelection = prompt(message);
 
@@ -56,7 +52,7 @@ function determinePlays(message) {
 }
 
 // Full Game
-function game() {
+function fullGame() {
   for (let i = 0; i < 5; i++) {
     determinePlays("Enter your Play:(Rock,Paper,Scissors)");
   }
@@ -69,4 +65,4 @@ function game() {
   }
 }
 
-game();
+fullGame();
